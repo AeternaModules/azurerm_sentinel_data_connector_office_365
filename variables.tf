@@ -14,9 +14,9 @@ EOT
   type = map(object({
     log_analytics_workspace_id = string
     name                       = string
-    exchange_enabled           = optional(bool, true)
-    sharepoint_enabled         = optional(bool, true)
-    teams_enabled              = optional(bool, true)
+    exchange_enabled           = optional(bool) # Default: true
+    sharepoint_enabled         = optional(bool) # Default: true
+    teams_enabled              = optional(bool) # Default: true
     tenant_id                  = optional(string)
   }))
 }
