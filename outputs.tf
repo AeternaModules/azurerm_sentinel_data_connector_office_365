@@ -1,3 +1,7 @@
+output "sentinel_data_connector_office_365s_id" {
+  description = "Map of id values across all sentinel_data_connector_office_365s, keyed the same as var.sentinel_data_connector_office_365s"
+  value       = { for k, v in azurerm_sentinel_data_connector_office_365.sentinel_data_connector_office_365s : k => v.id }
+}
 output "sentinel_data_connector_office_365s_exchange_enabled" {
   description = "Map of exchange_enabled values across all sentinel_data_connector_office_365s, keyed the same as var.sentinel_data_connector_office_365s"
   value       = { for k, v in azurerm_sentinel_data_connector_office_365.sentinel_data_connector_office_365s : k => v.exchange_enabled }
